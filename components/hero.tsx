@@ -3,10 +3,12 @@
 import { motion } from "framer-motion";
 import { ArrowDown } from "lucide-react";
 import Navbar from "@/components/navbar";
+import AnimatedBackground from "@/components/AnimatedBackground"; // Import the animated background
 
 export default function Hero() {
   return (
     <section className="relative h-screen flex flex-col justify-center items-center bg-black">
+      <AnimatedBackground /> {}
       <Navbar />
       <div className="z-10 text-center px-4 md:px-6">
         <motion.div

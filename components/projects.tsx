@@ -18,43 +18,66 @@ export default function Projects() {
 
   const projects = [
     {
-      title: "NexusAI Dashboard",
-      description: "An AI-powered analytics dashboard with real-time data visualization and predictive insights.",
-      image: "/placeholder.svg?height=600&width=800",
-      tags: ["React", "Node.js", "TensorFlow", "D3.js"],
-      category: "AI",
-      demoLink: "#",
-      codeLink: "#",
-    },
-    {
-      title: "Quantum E-commerce",
-      description:
-        "A full-featured e-commerce platform with advanced filtering, cart functionality, and payment integration.",
-      image: "/placeholder.svg?height=600&width=800",
-      tags: ["Next.js", "Stripe", "MongoDB", "Tailwind CSS"],
-      category: "Web",
-      demoLink: "#",
-      codeLink: "#",
-    },
-    {
-      title: "Nebula Social App",
-      description: "A cross-platform social networking app with real-time messaging and content sharing capabilities.",
-      image: "/placeholder.svg?height=600&width=800",
-      tags: ["React Native", "Firebase", "Redux", "Socket.io"],
+      title: "DrKhaled (In Progress)",
+      description: "An AI-powered healthcare app designed to streamline patient management, appointment scheduling, and secure medical data handling.",
+      image: "/drkhaled.png", 
+      objectPosition: "top",
+      tags: ["AI", "Mobile Development", "Android", "iOS", "Healthcare Tech"],
       category: "Mobile",
       demoLink: "#",
       codeLink: "#",
     },
+    {
+      title: "Car Management Backend",
+      description: "A backend service for managing car data, built with NestJS and MongoDB.",
+      image: "/car-management-backend.png",
+      objectPosition: "top",
+      tags: ["NestJS", "MongoDB", "AI"],
+      category: "Backend",
+      demoLink: "#",
+      codeLink: "https://github.com/BachaMedAmine/car-management-backend",
+    },
+    {
+      title: "Pixeliz",
+      description: "A modern web platform for projection, sound, and lighting services with a sleek dark theme.",
+      image: "/pixeliz.png",
+      objectPosition: "top",
+      tags: ["React", "Next.js", "Tailwind CSS"],
+      category: "Web",
+      demoLink: "#",
+      codeLink: "https://github.com/BachaMedAmine/Pixeliz",
+    },
+    {
+      title: "AI Image Processing Service",
+      description: "An AI-powered image enhancement and classification service.",
+      image: "/ai-image-processing.png",
+      objectPosition: "top",
+      tags: ["TypeScript", "Machine Learning", "Flask", "React"],
+      category: "AI",
+      demoLink: "#",
+      codeLink: "https://github.com/BachaMedAmine/ai-image-processing-service",
+    },
+    {
+      title: "Auth-iOS",
+      description: "The iOS frontend application for a Car Management System using Swift and SwiftUI.",
+      image: "/ova.png",
+      objectPosition: "top",
+      tags: ["Swift", "SwiftUI", "iOS"],
+      category: "Mobile",
+      demoLink: "#",
+      codeLink: "https://github.com/BachaMedAmine/Auth-iOS",
+    },
    
   
     {
-      title: "Spectrum Image Recognition",
-      description: "An AI-powered image recognition tool that can identify objects, scenes, and people in photos.",
-      image: "/placeholder.svg?height=600&width=800",
-      tags: ["Python", "TensorFlow", "Flask", "React"],
-      category: "AI",
+      title: "Auth-Android",
+      description: "A mobile authentication system for Android, developed using Kotlin.",
+      image: "/ova2.png",
+      objectPosition: "top",
+      tags: ["Kotlin", "Jetpack Compose", "Firebase"],
+      category: "Mobile",
       demoLink: "#",
-      codeLink: "#",
+      codeLink: "https://github.com/BachaMedAmine/authAndroid",
     },
   ]
 
@@ -110,13 +133,15 @@ export default function Projects() {
               transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }}
               className="bg-gray-900/30 backdrop-blur-sm border border-gray-800 rounded-lg overflow-hidden group"
             >
-              <div className="relative h-60 overflow-hidden">
-                <Image
-                  src={project.image || "/placeholder.svg"}
-                  alt={project.title}
-                  fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-110"
-                />
+              <div className="relative w-[90%] max-w-[350px] mx-auto h-[350px] sm:h-[400px] md:h-[500px] rounded-lg overflow-hidden">
+                 <Image
+                    src={project.image || "/placeholder.svg"}
+                    alt={project.title}
+                    layout="fill"
+                    objectFit="cover"
+                    objectPosition={project.objectPosition || "center"}
+                    className="transition-transform duration-500 group-hover:scale-110"
+                  />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center p-4">
                   <div className="flex gap-4">
                     <a

@@ -43,7 +43,7 @@ export default function About() {
                     objectFit="cover" // Keeps the correct aspect ratio
                     className="rounded-lg"
                 />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+              <div></div>
 
               {/* Decorative elements */}
               <div className="absolute top-0 left-0 w-full h-full">
@@ -55,7 +55,7 @@ export default function About() {
             </div>
 
             {/* Glowing effect */}
-            <div className="absolute -inset-0.5 bg-gradient-to-r from-cyan-400 to-fuchsia-500 rounded-lg blur opacity-30"></div>
+            <div className="absolute -inset-0.5 bg-gradient-to-r from-cyan-400 to-fuchsia-500 rounded-lg blur opacity-10"></div>
           </motion.div>
 
           <motion.div

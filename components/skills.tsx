@@ -24,7 +24,7 @@ export default function Skills() {
     {
       category: "Database",
       icon: <Layers className="h-6 w-6 text-purple-600" />,
-      items: ["MongoDB", "PostgreSQL", "Firebase", "Redis", "Prisma"],
+      items: ["MongoDB", "MySQL", "Firebase"],
     },
     {
       category: "DevOps",
@@ -94,8 +94,8 @@ export default function Skills() {
 
           <div className="space-y-6 max-w-3xl mx-auto">
             {[
-              { name: "Frontend Development", percentage: 95 },
-              { name: "Backend Development", percentage: 90 },
+              { name: "Backend Development", percentage: 95 },
+              { name: "Frontend Development", percentage: 90 },
               { name: "UI/UX Design", percentage: 85 },
               { name: "DevOps & Cloud", percentage: 80 },
               { name: "Machine Learning", percentage: 70 },
