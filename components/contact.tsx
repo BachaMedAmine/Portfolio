@@ -5,7 +5,7 @@ import type React from "react"
 import { useState } from "react"
 import { motion } from "framer-motion"
 import { useInView } from "react-intersection-observer"
-import { Mail, Phone, MapPin, Send } from "lucide-react"
+import { Mail, Phone, MapPin, Send, Instagram, Linkedin, MessageCircle } from "lucide-react"
 
 export default function Contact() {
   const [ref, inView] = useInView({
@@ -100,19 +100,47 @@ export default function Contact() {
               </div>
             </div>
 
-            <div className="mt-10">
+                   {/* Social Media Links */}
+                   <div className="mt-10">
               <h3 className="text-xl font-bold text-white mb-4">Connect With Me</h3>
               <div className="flex space-x-4">
-                {["github", "linkedin", "twitter", "dribbble"].map((social) => (
-                  <a
-                    key={social}
-                    href={`#${social}`}
-                    className="p-3 bg-gray-800 rounded-lg hover:bg-gray-700 transition-colors"
-                  >
-                    <span className="sr-only">{social}</span>
-                    <div className="h-6 w-6 text-gray-300">{/* Social icons would go here */}</div>
-                  </a>
-                ))}
+                {/* Instagram */}
+                <a
+                  href="https://www.instagram.com/med_amine_becha/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-3 bg-gray-800 rounded-lg hover:bg-gray-700 transition-colors"
+                >
+                  <Instagram className="h-6 w-6 text-pink-500" />
+                </a>
+
+                {/* LinkedIn */}
+                <a
+                  href="https://www.linkedin.com/in/med-amine-bacha-6a900b308/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-3 bg-gray-800 rounded-lg hover:bg-gray-700 transition-colors"
+                >
+                  <Linkedin className="h-6 w-6 text-blue-500" />
+                </a>
+
+                {/* WhatsApp */}
+                <a
+                  href="https://web.whatsapp.com/send?phone=21653658515"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-3 bg-gray-800 rounded-lg hover:bg-gray-700 transition-colors"
+                >
+                  <MessageCircle className="h-6 w-6 text-green-500" />
+                </a>
+
+                {/* Email */}
+                <a
+                  href="mailto:mohamedaminebacha99@gmail.com"
+                  className="p-3 bg-gray-800 rounded-lg hover:bg-gray-700 transition-colors"
+                >
+                  <Mail className="h-6 w-6 text-yellow-400" />
+                </a>
               </div>
             </div>
           </motion.div>
