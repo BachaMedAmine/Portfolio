@@ -10,11 +10,7 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setIsScrolled(true)
-      } else {
-        setIsScrolled(false)
-      }
+      setIsScrolled(window.scrollY > 50)
     }
 
     window.addEventListener("scroll", handleScroll)
@@ -27,20 +23,18 @@ export default function Navbar() {
         isScrolled ? "bg-black/80 backdrop-blur-md py-3" : "bg-transparent py-5"
       }`}
     >
-      <div className="container mx-auto px-4 md:px-6 flex justify-between items-center">
+      <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
+        {/* Logo */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
           className="text-xl font-bold"
         >
-          <span className="text-fuchsia-500">&lt;</span>
-          <span className="text-white">AC</span>
-          <span className="text-cyan-400">/&gt;</span>
         </motion.div>
 
-        {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-8">
+        {/* Centered Navigation */}
+        <nav className="flex-1 hidden md:flex justify-center items-center space-x-8">
           {["Home", "About", "Skills", "Projects", "Contact"].map((item, index) => (
             <motion.a
               key={item}
@@ -87,4 +81,3 @@ export default function Navbar() {
     </header>
   )
 }
-

@@ -18,7 +18,7 @@ export default function Footer() {
           <div className="mb-6 md:mb-0">
             <div className="text-xl font-bold">
               <span className="text-fuchsia-500">&lt;</span>
-              <span className="text-white">Alex Chen</span>
+              <span className="text-white">Med Amine Bacha</span>
               <span className="text-cyan-400">/&gt;</span>
             </div>
             <p className="text-gray-400 mt-2">Creating digital experiences that inspire</p>
@@ -52,7 +52,7 @@ export default function Footer() {
           <p className="text-gray-400 text-sm">© {new Date().getFullYear()} Med AmineBacha. All rights reserved.</p>
 
           <p className="text-gray-400 text-sm mt-4 md:mt-0">
-            Designed & Built with <span className="text-fuchsia-500">♥</span> using Next.js & Tailwind CSS
+            Designed & Built with <span className="text-fuchsia-500">♥</span> using Next.js
           </p>
         </div>
       </div>

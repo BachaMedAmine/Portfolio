@@ -4,6 +4,8 @@ import { motion } from "framer-motion"
 import { useInView } from "react-intersection-observer"
 import Image from "next/image"
 
+
+
 export default function About() {
   const [ref, inView] = useInView({
     triggerOnce: true,
@@ -33,13 +35,14 @@ export default function About() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="relative"
           >
-            <div className="relative h-[400px] w-full md:h-[500px] rounded-lg overflow-hidden">
-              <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/61058d9bb45252eec4ebfe88bf6e6fc3.jpg-sB8sn3ZBYXdLuLuM7eR3KnOpUbglzC.jpeg"
-                alt="Developer Portrait"
-                fill
-                className="object-cover"
-              />
+            <div className="relative h-[500px] w-full md:h-[500px] rounded-lg overflow-hidden">
+                     <Image
+                  src="/portfolio.jpeg" // Use the correct path
+                  alt="Developer Portrait"
+                  width={800} // Set appropriate width
+                  height={500} // Set appropriate height
+                  className="object-cover"
+                />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
 
               {/* Decorative elements */}
