@@ -1,4 +1,9 @@
-
+let userConfig = undefined
+try {
+  userConfig = await import('./user-next.config')
+} catch (e) {
+  // ignore error
+}
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
