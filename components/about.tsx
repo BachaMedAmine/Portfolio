@@ -35,13 +35,13 @@ export default function About() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="relative"
           >
-            <div className="relative h-[500px] w-full md:h-[500px] rounded-lg overflow-hidden">
+           <div className="relative w-[90%] max-w-[350px] mx-auto h-[350px] sm:h-[400px] md:h-[500px] rounded-lg overflow-hidden">
                      <Image
-                  src="/portfolio.jpeg" // Use the correct path
-                  alt="Developer Portrait"
-                  width={800} // Set appropriate width
-                  height={500} // Set appropriate height
-                  className="object-cover"
+                    src="/portfolio.jpeg"
+                    alt="Developer Portrait"
+                    layout="fill" // Ensures the image fills the div properly
+                    objectFit="cover" // Keeps the correct aspect ratio
+                    className="rounded-lg"
                 />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
 
