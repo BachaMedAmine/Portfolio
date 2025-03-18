@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
 import { Menu, X } from "lucide-react"
+import Image from "next/image"
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -10,7 +11,11 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50)
+      if (window.scrollY > 50) {
+        setIsScrolled(true)
+      } else {
+        setIsScrolled(false)
+      }
     }
 
     window.addEventListener("scroll", handleScroll)
@@ -23,18 +28,25 @@ export default function Navbar() {
         isScrolled ? "bg-black/80 backdrop-blur-md py-3" : "bg-transparent py-5"
       }`}
     >
-      <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
-        {/* Logo */}
+      <div className="container mx-auto px-4 md:px-6 flex justify-between items-center">
+        {/* Luffy Nika Logo */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
           className="text-xl font-bold"
         >
+          <Image
+            src="/luffy-nika.png" // Ensure this image is inside the /public folder
+            alt="Luffy Nika"
+            width={50}
+            height={50}
+            className="rounded-full"
+          />
         </motion.div>
 
-        {/* Centered Navigation */}
-        <nav className="flex-1 hidden md:flex justify-center items-center space-x-8">
+        {/* Desktop Navigation - Centered */}
+        <nav className="hidden md:flex flex-1 justify-center items-center space-x-8">
           {["Home", "About", "Skills", "Projects", "Contact"].map((item, index) => (
             <motion.a
               key={item}
@@ -64,7 +76,7 @@ export default function Navbar() {
           exit={{ opacity: 0, height: 0 }}
           className="md:hidden bg-black/90 backdrop-blur-md"
         >
-          <div className="container mx-auto px-4 py-4 flex flex-col space-y-4">
+          <div className="container mx-auto px-4 py-4 flex flex-col items-center space-y-4">
             {["Home", "About", "Skills", "Projects", "Contact"].map((item) => (
               <a
                 key={item}
