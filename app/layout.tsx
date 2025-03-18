@@ -1,15 +1,16 @@
-import type { Metadata } from 'next'
-import './globals.css'
+import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/react";
+import "./globals.css";
 
 export const metadata: Metadata = {
-  title: 'BachaPortFolio',
-  description: 'Created with Next.js by bechbech',
-}
+  title: "BachaPortFolio",
+  description: "Created with Next.js by bechbech",
+};
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode
+  children: React.ReactNode;
 }>) {
   return (
     <html lang="en">
@@ -19,7 +20,10 @@ export default function RootLayout({
         <link rel="icon" type="image/png" href="/luffy-nika.png" sizes="32x32" />
         <link rel="apple-touch-icon" href="/luffy-nika.png" />
       </head>
-      <body>{children}</body>
+      <body>
+        {children}
+        <Analytics /> {/* Add this inside the body */}
+      </body>
     </html>
-  )
+  );
 }

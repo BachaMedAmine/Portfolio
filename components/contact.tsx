@@ -46,12 +46,12 @@ export default function Contact() {
         process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
         process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
         {
-          name: formData.name,
-          email: formData.email,
-          subject: formData.subject || "New Message from Your Website",
-          message: formData.message,
-          from_name: "Bacha's Team", // Custom sender name
-          reply_to: formData.email, // Reply-to field for auto-reply setup
+          name: formData.name,    
+        email: formData.email,  
+        subject: formData.subject,
+        message: formData.message,
+        from_name: formData.name, // Matches EmailJS template
+        reply_to: formData.email, // Reply-to field for auto-reply setup
         },
         process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
       );
