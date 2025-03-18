@@ -87,42 +87,6 @@ export default function Skills() {
             </motion.div>
           ))}
         </div>
-
-        {/* Skill meter section */}
-        <div className="mt-16">
-          <h3 className="text-2xl font-bold text-white mb-8 text-center">Proficiency</h3>
-
-          <div className="space-y-6 max-w-3xl mx-auto">
-            {[
-              { name: "Backend Development", percentage: 95 },
-              { name: "Frontend Development", percentage: 90 },
-              { name: "UI/UX Design", percentage: 85 },
-              { name: "DevOps & Cloud", percentage: 80 },
-              { name: "Machine Learning", percentage: 70 },
-            ].map((skill, index) => (
-              <motion.div
-                key={skill.name}
-                initial={{ opacity: 0 }}
-                animate={inView ? { opacity: 1 } : { opacity: 0 }}
-                transition={{ duration: 0.5, delay: 0.6 + index * 0.1 }}
-                className="space-y-2"
-              >
-                <div className="flex justify-between">
-                  <span className="text-gray-300">{skill.name}</span>
-                  <span className="text-gray-400">{skill.percentage}%</span>
-                </div>
-                <div className="h-2 w-full bg-gray-800 rounded-full overflow-hidden">
-                  <motion.div
-                    initial={{ width: 0 }}
-                    animate={inView ? { width: `${skill.percentage}%` } : { width: 0 }}
-                    transition={{ duration: 1, delay: 0.8 + index * 0.2 }}
-                    className="h-full bg-gradient-to-r from-cyan-400 to-fuchsia-500 rounded-full"
-                  ></motion.div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
       </div>
     </section>
   )
