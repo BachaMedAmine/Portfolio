@@ -18,25 +18,25 @@ export default function Contact() {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
-  }
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSending(true);
-  
+
     try {
       const result = await emailjs.send(
         process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
         process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
         {
-          name: formData.name,    // Name input
-          email: formData.email,  // User's email input
+          name: formData.name,
+          email: formData.email,
           subject: formData.subject,
           message: formData.message,
         },
         process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
       );
-  
+
       console.log("SUCCESS!", result.text);
       alert("Message sent successfully!");
       setFormData({ name: "", email: "", subject: "", message: "" });
@@ -44,7 +44,7 @@ export default function Contact() {
       console.error("FAILED...", error);
       alert("Failed to send message. Please try again.");
     }
-  
+
     setIsSending(false);
   };
 
