@@ -135,20 +135,15 @@ export default function Projects() {
             >
               <div className="relative w-[90%] max-w-[350px] mx-auto h-[350px] sm:h-[400px] md:h-[500px] rounded-lg overflow-hidden">
               <Image
-  src={project.image || "/placeholder.svg"}
-  alt={project.title}
-  fill
-  className={`object-cover transition-transform duration-500 group-hover:scale-110 ${project.objectPosition ? `object-[${project.objectPosition}]` : "object-center"}`}
+                  src={project.image || "/placeholder.svg"}
+                  alt={project.title}
+                  fill
+                  className={`object-cover transition-transform duration-500 group-hover:scale-110 ${project.objectPosition ? `object-[${project.objectPosition}]` : "object-center"}`}
 
                   />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center p-4">
                   <div className="flex gap-4">
-                    <a
-                      href={project.demoLink}
-                      className="p-2 bg-cyan-400 rounded-full hover:bg-cyan-500 transition-colors"
-                    >
-                      <ExternalLink className="h-5 w-5 text-black" />
-                    </a>
+                    
                     <a
                       href={project.codeLink}
                       className="p-2 bg-fuchsia-500 rounded-full hover:bg-fuchsia-600 transition-colors"
