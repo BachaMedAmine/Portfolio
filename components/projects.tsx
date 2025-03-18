@@ -19,7 +19,7 @@ export default function Projects() {
   const projects = [
     {
       "title": "MSAware (In Progress)",
-      "description": "How can we empower MS patients with an AI-driven solution that predicts flare-ups, provides real-time monitoring, and improves their quality of life?\n\nFeatures:\n- 📲 Apple Health & Google Fit Compatibility\n- 🔔 Personalized Alerts & Recommendations\n- ✍️ Manual Symptom Logging\n- 🤖 AI-Driven Flare-Up Detection\n- 📊 Data Export for Medical Follow-up",
+      "description": "How can we empower MS patients with an AI-driven solution that predicts flare-ups, provides real-time monitoring, and improves their quality of life?\n\nFeatures:\n-Apple Health & Google Fit Compatibility\n-Personalized Alerts & Recommendations\n- Manual Symptom Logging\n- AI-Driven Flare-Up Detection\n- Data Export for Medical Follow-up",
       "image": "/ms.png",
       "objectPosition": "top",
       "tags": ["AI", "Mobile Development", "Android", "iOS", "Healthcare Tech"],
