@@ -23,25 +23,30 @@ export default function Contact() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSending(true);
-
+  
     try {
-      const result = await emailjs.sendForm(
+      const result = await emailjs.send(
         process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
         process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
-        formRef.current!,
+        {
+          name: formData.name,    // Name input
+          email: formData.email,  // User's email input
+          subject: formData.subject,
+          message: formData.message,
+        },
         process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
-      )
-
+      );
+  
       console.log("SUCCESS!", result.text);
-      alert(" Message sent successfully!");
+      alert("Message sent successfully!");
       setFormData({ name: "", email: "", subject: "", message: "" });
     } catch (error) {
       console.error("FAILED...", error);
       alert("Failed to send message. Please try again.");
     }
-
+  
     setIsSending(false);
-  }
+  };
 
   return (
     <section id="contact" className="py-20 bg-gradient-to-b from-black to-gray-900">
