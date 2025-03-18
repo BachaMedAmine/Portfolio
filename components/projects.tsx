@@ -134,13 +134,12 @@ export default function Projects() {
               className="bg-gray-900/30 backdrop-blur-sm border border-gray-800 rounded-lg overflow-hidden group"
             >
               <div className="relative w-[90%] max-w-[350px] mx-auto h-[350px] sm:h-[400px] md:h-[500px] rounded-lg overflow-hidden">
-                 <Image
-                    src={project.image || "/placeholder.svg"}
-                    alt={project.title}
-                    layout="fill"
-                    objectFit="cover"
-                    objectPosition={project.objectPosition || "center"}
-                    className="transition-transform duration-500 group-hover:scale-110"
+              <Image
+  src={project.image || "/placeholder.svg"}
+  alt={project.title}
+  fill
+  className={`object-cover transition-transform duration-500 group-hover:scale-110 ${project.objectPosition ? `object-[${project.objectPosition}]` : "object-center"}`}
+
                   />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center p-4">
                   <div className="flex gap-4">

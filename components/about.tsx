@@ -36,12 +36,11 @@ export default function About() {
             className="relative"
           >
            <div className="relative w-[90%] max-w-[350px] mx-auto h-[350px] sm:h-[400px] md:h-[500px] rounded-lg overflow-hidden">
-                     <Image
+                 <Image
                     src="/portfolio.jpeg"
                     alt="Developer Portrait"
-                    layout="fill" // Ensures the image fills the div properly
-                    objectFit="cover" // Keeps the correct aspect ratio
-                    className="rounded-lg"
+                    fill
+                    className="rounded-lg object-cover"
                 />
               <div></div>
 
