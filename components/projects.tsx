@@ -164,12 +164,7 @@ export default function Projects() {
                   ))}
                 </div>
                 <div className="flex justify-between">
-                  <a
-                    href={project.demoLink}
-                    className="text-cyan-400 hover:text-cyan-300 flex items-center gap-1 text-sm"
-                  >
-                    Live Demo <ExternalLink className="h-3 w-3" />
-                  </a>
+                 
                   <a
                     href={project.codeLink}
                     className="text-fuchsia-500 hover:text-fuchsia-400 flex items-center gap-1 text-sm"
