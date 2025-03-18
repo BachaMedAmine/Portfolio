@@ -18,14 +18,14 @@ export default function Projects() {
 
   const projects = [
     {
-      title: "DrKhaled (In Progress)",
-      description: "An AI-powered healthcare app designed to streamline patient management, appointment scheduling, and secure medical data handling.",
-      image: "/drkhaled.png", 
-      objectPosition: "top",
-      tags: ["AI", "Mobile Development", "Android", "iOS", "Healthcare Tech"],
-      category: "Mobile",
-      demoLink: "#",
-      codeLink: "#",
+      "title": "MSAware (In Progress)",
+      "description": "How can we empower MS patients with an AI-driven solution that predicts flare-ups, provides real-time monitoring, and improves their quality of life?\n\nFeatures:\n- 📲 Apple Health & Google Fit Compatibility\n- 🔔 Personalized Alerts & Recommendations\n- ✍️ Manual Symptom Logging\n- 🤖 AI-Driven Flare-Up Detection\n- 📊 Data Export for Medical Follow-up",
+      "image": "/ms.png",
+      "objectPosition": "top",
+      "tags": ["AI", "Mobile Development", "Android", "iOS", "Healthcare Tech"],
+      "category": "Mobile",
+      "demoLink": "#",
+      "codeLink": "#"
     },
     {
       title: "Car Management Backend",
@@ -58,7 +58,7 @@ export default function Projects() {
       codeLink: "https://github.com/BachaMedAmine/ai-image-processing-service",
     },
     {
-      title: "Auth-iOS",
+      title: "OVA",
       description: "The iOS frontend application for a Car Management System using Swift and SwiftUI.",
       image: "/ova.png",
       objectPosition: "top",
